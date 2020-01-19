@@ -1,0 +1,7 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: gcr.io/cool-continuity-263512/skaffold-test
+      jib: {}
+  local: {}
