@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gcp-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: gcp-deployment-app
+    spec:
+      containers:
+        - name: gcp-deployment
+          image: gcr.io/cool-continuity-263512/skaffold-test
+          ports:
+            - containerPort: 9091
+

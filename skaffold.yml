@@ -5,3 +5,7 @@ build:
     - image: gcr.io/cool-continuity-263512/skaffold-test
       jib: {}
   local: {}
+deploy:
+  kubectl:
+          manifests:
+                  - k8-*
